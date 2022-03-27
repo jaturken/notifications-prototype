@@ -11,6 +11,7 @@ redis_client = redis.StrictRedis(host=settings.REDIS_HOST, db=settings.REDIS_DB)
 def push(redis: redis.StrictRedis, user_id: str, review_ids: List[str]) -> int:
     """Push review_ids to user_id reviews list, return total count of reviews."""
     # TODO: possibly update user_id TTL
+    redis.set(f'{user_id}_last_pulled_at', int(time.time()))  # update last_pulled_at
     return redis.lpush(user_id, *review_ids)
 
 
