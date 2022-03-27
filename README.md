@@ -24,8 +24,8 @@ Simple pusher with two commands:
 ## Setup
 
 ```bash
-git clone ???
-cd ???
+git clone git@github.com:jaturken/notifications-prototype.git
+cd notifications-prototype
 poetry install
 poetry shell
 ```
