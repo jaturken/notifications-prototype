@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "notifications-prototype"
+version = "0.1.0"
+description = ""
+authors = ["Alex Teut <teut_a@rocketdata.io>"]
+
+[tool.poetry.scripts]
+pull = "notifications_prototype.puller:pull_all"
+push_valid_data = "notifications_prototype.pusher:push_valid_data"
+push_invalid_data = "notifications_prototype.pusher:push_invalid_data"
+monitor = "notifications_prototype.monitor:run"
+clean = "notifications_prototype.cleaner:clean"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+redis = "^4.2.0"
+environs = "^9.5.0"
+loguru = "^0.6.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

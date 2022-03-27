@@ -1,0 +1,14 @@
+__pycache__
+dist
+.env
+.env_test
+.vscode
+.coverage
+*.egg-info
+.DS_Store
+celerybeat-schedule.db
+erl_crash.dump
+.idea/
+tests/tank/logs
+tests/tank/tank_errors.log
+dumps/*
