@@ -1,6 +1,6 @@
 # Notifications message bus prototype
 ## The problem
-There exists multiple brands, each brand has multiple users, also each brands has many reviews. Reviews are added/updated frequently. One have to accumulate changes in reviews and make aggregated notification of each responsible user.
+There exists multiple brands, each brand has multiple users, also each brand has many reviews. Reviews are added/updated frequently. One have to accumulate changes in reviews and make aggregated notification of each responsible user.
 ## The solution
 Redis as message bus with safe accumulation/consuming. For each user there exist a list of reviews to notify about. List is safe to push and pull reviews.
 ### Data storage
@@ -38,4 +38,4 @@ poetry shell
 6. Pull data: `poetry run pull` and see no invalid data pulled
 7. After 20 sec(default monitor config) check monitor log and see invalid data alerted
 8. Clean invalid data: `poetry run clean {invalid_user_id}`
-9. Check monitor logs and see selenity
+9. Check monitor logs and see serenity
